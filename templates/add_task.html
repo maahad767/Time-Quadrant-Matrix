@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">Add Task</h2>
+
+
+<form action='/addtask' method='POST'>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+            <label for="task-text">Add task details</label>
+            <input type="text" name="task-text" class="form-control" id="task-text" required> 
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="task-deadline">Deadline</label>
+                <input class="form-control" type="datetime-local" id="task-deadline" name="datetime" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="category">Category/Type</label>
+                <select class="custom-select" name="category" id="category" required>
+                    <option value="" selected disabled>Open this select menu</option>
+                    <option value="exam">Exam/Test</option>
+                    <option value="skill">Skill Dev</option>
+                    <option value="hangout">Hangout with Friends</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="importance">Priority</label>
+                <select class="custom-select" name="importance" id="importance" disabled required>
+                    <option value="" selected>Open this select menu</option>
+                    <option value="high">High</option>
+                    <option value="low">Low</option>
+                </select> 
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md">
+            <button type="submit" name="addRecur" class="btn btn-info btn-block">Save and Add Another</button>
+        </div>
+        <div class="form-group col-md">
+            <button type="submit" name="add" class="btn btn-info btn-block">Add Task and Return</button>
+        </div>
+    </div>
+</form>
+
+<script src="{{ url_for('static', filename='js/add_task.js') }}" ></script>
+
+{% endblock content %}

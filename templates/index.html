@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Time Management Matrix Analyzer</title>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mb-4">
+          <a href="/urgent-important" style="text-decoration: none;">
+            <div class="card text-white bg-danger">
+                <div class="card-header">Urgent, Important</div>
+                <div class="card-body">
+                  <h5 class="card-title">Do</h5>
+                  <p class="card-text">Some of your tasks are needed to be finished as soon as possible, check them.</p>
+                </div>
+              </div>
+          </a>
+        </div>
+        <div class="col-md-6 mb-4">
+        <a href="/not-urgent-important" style="text-decoration: none;">
+          <div class="card text-white bg-success">
+            <div class="card-header">Not Urgent, Important</div>
+            <div class="card-body">
+              <h5 class="card-title">Plan</h5>
+              <p class="card-text">It's a wise decision to check if you can do anything that's not urgent yet.</p>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+        <a href="/urgent-not-important" style="text-decoration: none;">
+          <div class="card text-white bg-secondary">
+            <div class="card-header">Urgent, Not Important</div>
+            <div class="card-body">
+              <h5 class="card-title">Delegate</h5>
+              <p class="card-text">See if you can manage these tasks without doing them yourselve. Or if possible avoid doing these</p>
+            </div>
+          </div>
+        </a>
+        </div>
+        <div class="col-md-6 mb-4">
+        <a href="/not-urgent-not-important" style="text-decoration: none;">
+          <div class="card bg-dark text-white">
+            <div class="card-header">Not Urgent, Not Important</div>
+            <div class="card-body">
+              <h5 class="card-title">Eleminate</h5>
+              <p class="card-text">Try to eleminate these tasks as much as possible, otherwise you may regret doing these.</p>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+      <a href="/addtask" role="button" class="btn btn-info btn-lg btn-block mt-4">Add New Task</a>
+</div>
+{% endblock content %}
