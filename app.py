@@ -10,7 +10,7 @@ app.secret_key = 'ILoveCS50ButIloveProphetMuhammadSallallahuAlaihiWasallamMore'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///timematrix.sqlite3'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.debug = True
+app.debug = False
 app.permanent_session_lifetime = timedelta(days=7)
 
 db = SQLAlchemy(app)
@@ -296,5 +296,5 @@ def page_not_found(e):
     return render_template('500.html'), 500
 
 if __name__ == '__main__':
-    # db.create_all()
+    db.create_all()
     app.run()
