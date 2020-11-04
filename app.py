@@ -22,11 +22,6 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
-@app.route('/secret_page')
-@login_required
-def secret_page():
-    return f"Hello, you're in secret page - {session['user-email']}"
-
 # models
 class User(db.Model):
     __tablename__ = 'user'
@@ -161,6 +156,9 @@ def register():
             db.session.add(address)
             db.session.commit()
             flash("You've successfully registred!", category='success')
+            session["logged_in"] = True
+            session["user-firstname"] = user.first_name
+            session["user-email"] = email
             return redirect(url_for('index'))
         
         flash("Unknown Error Occured", category='danger')
