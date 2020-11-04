@@ -106,15 +106,16 @@ def login():
         password = request.form.get('password')
         if email and password:
             user = User.query.filter_by(email=email).first()
-            password_hash = user.password
+            if user:
+                password_hash = user.password
 
-            # verify username and password match
-            if sha256_crypt.verify(password, password_hash):
-                session["logged_in"] = True
-                session["user-firstname"] = user.first_name
-                session["user-email"] = email
-                flash("You've successfully logged in!", category='success')
-                return redirect(url_for('index'))
+                # verify username and password match
+                if sha256_crypt.verify(password, password_hash):
+                    session["logged_in"] = True
+                    session["user-firstname"] = user.first_name
+                    session["user-email"] = email
+                    flash("You've successfully logged in!", category='success')
+                    return redirect(url_for('index'))
         flash('Username/password Invalid', category='danger')
         return render_template('login.html')    
 
