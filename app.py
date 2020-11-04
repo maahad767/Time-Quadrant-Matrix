@@ -3,10 +3,12 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import timedelta, datetime
 from passlib.hash import sha256_crypt
 from functools import wraps
+import os
 
 app = Flask(__name__) 
 app.secret_key = 'ILoveCS50ButIloveProphetMuhammadSallallahuAlaihiWasallamMore'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///timematrix.sqlite3'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///timematrix.sqlite3'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.debug = True
 app.permanent_session_lifetime = timedelta(days=7)
