@@ -24,7 +24,6 @@ def login_required(f):
 
 # models
 class User(db.Model):
-    __tablename__ = 'user'
     _id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.String(100), nullable=False)
     last_name = db.Column(db.String(100), nullable=False)
@@ -44,7 +43,6 @@ class User(db.Model):
 
 
 class Address(db.Model):
-    __tablename__ = 'address'
     _id = db.Column(db.Integer, primary_key=True)
     uid = db.Column(db.Integer, db.ForeignKey('user._id', ondelete='CASCADE'), nullable=False)
     addr1 = db.Column(db.String(255), nullable=False)
@@ -69,7 +67,6 @@ class Address(db.Model):
 
 
 class Task(db.Model):
-    __tablename__ = 'task'
     _id = db.Column(db.Integer, primary_key=True)
     owner = db.Column(db.Integer, db.ForeignKey('user._id', ondelete='CASCADE'), nullable=False)
     task_text = db.Column(db.Text, nullable=False)
