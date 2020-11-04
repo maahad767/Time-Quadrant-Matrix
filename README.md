@@ -5,8 +5,8 @@ Demo-Link: https://taskmanagementmatrix.herokuapp.com/
 I request everyone please try using this website for best understaning of the app.
 
 # Screenshots
-![dashboard](https://ibb.co/BPC0Lsz)
-![urgent and important tasks](https://ibb.co/FgvMmJC)
+![dashboard](https://i.ibb.co/j5rnh46/dashboard.png)
+![urgent and important tasks](https://i.ibb.co/Yp9MP8w/urgent.png)
 
 
 # Project Description
