@@ -1,8 +1,13 @@
 # Time-Quadrant-Matrix
 Task/Time Management Matrix project is built based on Stephen Covey's Time Management Matrix in his book.
 
-Demo-Link: [This is a link]https://taskmanagementmatrix.herokuapp.com/
+Demo-Link: https://taskmanagementmatrix.herokuapp.com/
 I request everyone please try using this website for best understaning of the app.
+
+# Screenshots
+![dashboard](https://ibb.co/BPC0Lsz)
+![urgent and important tasks](https://ibb.co/FgvMmJC)
+
 
 # Project Description
 This is a very simple project. A student(anyone can use aswell) just need to register to use this project. 
