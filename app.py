@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = 'ILoveCS50ButIloveProphetMuhammadSallallahuAlaihiWasallamMore'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///timematrix.sqlite3'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.debug = False
+app.debug = True
 app.permanent_session_lifetime = timedelta(days=7)
 
 db = SQLAlchemy(app)
