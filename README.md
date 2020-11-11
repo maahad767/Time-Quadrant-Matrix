@@ -19,11 +19,3 @@ time management matrix.
 Language: Python (v-3.8), JS DOM, HTML, CSS
 Framework: Flask, Bootstrap
 * Set environment variable as DATABASE_URL providing database url or you can modify app.py and uncomment line 10 and delete line 11 for using sqlite db.
-
-# About Me
-I am a student from Bangladesh. This is my first ever Flask app. 
-In this project I did everything from idea to implementation all by myself alhamdulillah.
-I am learning full-stack development using python and javascript frameworks.
-If anyone likes to hire me (will be very thankful, I need to earn money to finish off my graduation), 
-feel free to knock me at maahad.767@gmail.com
-Thank you so much for visiting my project.
